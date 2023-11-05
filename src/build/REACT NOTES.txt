@@ -1,0 +1,89 @@
+REACT NOTES
+
+* there are two types of components in react
+1. class component
+2. function component
+
+* function based component is more popular bcz syntax is easy. classes are like confused one
+
+* what is JSX?
+JSX stand for javascript Syntax extension. JSX allows us to write HTML in React. JSX make it easier to 
+write and add HTML in React.
+
+react prefer camelCase
+
+Changes in JSX
+class -> className
+for -> htmlFor
+tabindex -> tabIndex
+
+use curly bracket where we use javascript
+
+return(
+<>
+hum jo bhi isme likhenge render(show) ho jaega...
+</>
+);
+
+babel compiles JSX down to React.createElements() calls.
+
+multi-page applications
+file share hoegi html+css+js har page ke liye. it load the entire page
+single-page applications
+html+css+js file share hoegi par js takeover kr legi. spa's donot load the entire content.
+
+* what is props?
+stands for properties and is being used for passing data from one component to another.
+
+* The state is a built-in React object that is used to contain data or information about the component.
+
+* hooks:-
+hooks are functions that allow you to "hook into" React state and lifecycle features from function components. 
+
+* Two commonly used hooks are useState and useEffect
+
+* useState Hook:
+
+useState is a hook that enables you to add state to functional components. It takes an initial state value as an argument and returns an array with two elements: the current state value and a function to update that value.
+It allows you to manage component-specific state without the need for a class component.
+Example usage:
+
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+* what is react router?
+React Router is a popular library for building single-page web applications with React, a JavaScript library for building user interfaces. React Router is used for managing the routing and navigation in React applications. It allows you to define and organize different routes in your application, specifying which component should be rendered for each route.
+
+* diff b/w a href and link to 
+If you are referring to replacing an <a> tag with a React Router Link component in a React application, the key difference is that the React Router Link component handles client-side routing without a full page reload, providing a smoother and faster user experience within a single-page application. In contrast, a standard <a> tag with an href attribute results in a full page reload when clicked.
+
+* while using PATH= react do partial matching and while using EXACT PATH= react do exact matching in the react router dom.
+
+* we can use routes instead of switch
+export 'Switch' (imported as 'Switch') was not found in 'react-router-dom'
+
+// Use <Routes> instead of <Switch>
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
+
+<Router>
+      <Link to='/home'>Home</Link>
+      <Link to='/about'>About</Link>
+
+      <Routes>
+      <Route path='/home' element={<Home/>} />
+      <Route path='/about' element={<About/>} />
+    
+      </Routes>
+      </Router>
+
+
+
+
